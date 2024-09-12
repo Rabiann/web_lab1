@@ -1,0 +1,90 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust programmin language</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <table style="width: 100%; height: 100%;">
+        <tr>
+            <td colspan="4" class="header">
+                <div class="header__title">
+                    <h2>In Rust we trust!🦀🦀🦀</h2>
+                </div>
+                <img src="https://brandslogos.com/wp-content/uploads/images/rust-logo.png" alt="rust logo" style="float: right;">
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="3" class="side">
+                <ul>
+                    <li><a href="index.html">Main</a></li>
+                    <li><a href="learning.html">Learning Rust</a></li>
+                    <li><a href="ecosystem.html">Rust ecosystem🦀</a></li>
+                    <li><a href="web.html">Web-development with Rust</a></li>
+                </ul>
+            </td>
+            <td rowspan="2" colspan="2" class="main">
+                <p>Now, let's write simple http-client in Rust</p>
+                <hr>
+                <h3>Adding dependencies</h3>
+                <p>First off all, let's add <i>reqwest</i> crate to our <b>Cargo.toml</b>.</p>
+                <pre><code>
+                    cargo add reqwest
+                </code></pre>
+                <hr>
+                <h3>Taking input paraneters</h3>
+                <p>Let's write logic for entering link via CLI parameter</p>
+                <pre><code>
+                    fn main() {
+                        let params: Vec<String> = std::env::args().into_iter().collect();
+                        let link = params[1]; // first param is the name of file
+                        println!("Link: {}", link);
+                    }
+                </code></pre>
+                <p>Now we can run a program</p>
+                <code>cargo run -- google.com</code>
+                <p>And get a result</p>
+                <code>Link: google.com</code>
+                <hr>
+                <h3>Actually writing a client</h3>
+                <p>Now lets write client which will return response body</p>
+                <pre><code>
+                    fn main() {
+                        let params: Vec<String> = std::env::args().into_iter().collect();
+                        let link = params[1];
+                        println!("Link: {}", link);
+
+                        let response = reqwest::blocking::get(&link).unwrap();
+
+                        println!("{:?}", response.text());
+                    }
+                </code></pre>
+                <p>After executing we will get response body</p>
+            </td>
+            <td class="side1">
+                <h3>What about Rust's ecosystem?</h3>
+The Rust ecosystem is still relatively young and evolving, especially compared to more established languages like C++ and Python. However, it is fast-growing and gaining momentum due to strong community support, contributions from major tech companies, and its unique focus on performance and safety.
+            </td>
+        </tr>
+        <tr>
+            <td class="side2">
+                <h3>Where can I get libraries for my project?</h3>
+                <p>Cosider visiting <a href="https://crates.io">crates.io</a>. It is an official repository of Rust so known <b>crates</b>.</p>
+                <h3>Where I can read documentation for them?</h3>
+                <p>Documentation for all crates is placed on <a href="https://docs.rs">docs.rs</a>. There you can find docs, modules, cargo-features and source code. Some crates and frameworks can have their own websites, like <a href="https://actix.rs">actix_web</a>.</p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" class="footer">
+                <div class="footer__div">
+                    <div class="footer__title">
+                        <h2>🗲blazing fast language</h2>
+                    </div>
+                    <p>Please, consider learning more about reqwest here: <a href="https://docs.rs/reqwest/latest/reqwest/">link</a>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
