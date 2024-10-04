@@ -66,29 +66,35 @@ div > div > div {
     padding: 4%;
     display: flex;
     justify-content: space-between;
+    border: 3px solid black;
 }
 
 .side {
     background-color: aquamarine;
     padding: 4%;
+    border: 3px solid black;
 }
 
 .main {
     background-color: antiquewhite;
     padding: 4%;
     flex-grow: 2;
+    border: 3px solid black;
 }
 
 .side1 {
     flex-grow: 1;
     background-color: red;
+    border: 3px solid black;
 }
 
 .side2 {
     flex-grow: 1;
     background-color: blueviolet;
+    border: 3px solid black;
 }
 
 .footer {
     background-color: azure;
+    border: 3px solid black;
 }
