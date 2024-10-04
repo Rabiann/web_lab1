@@ -3,29 +3,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rust programmin language</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./flexbox.css">
 </head>
 <body>
-    <table style="width: 100%; height: 100%;">
-        <tr>
-            <td colspan="4" class="header">
-                <div class="header__title">
-                    <h2>In Rust we trust!🦀🦀🦀</h2>
-                </div>
-                <img src="rust-logo.png" alt="rust logo" style="float: right;">
-            </td>
-        </tr>
-        <tr>
-            <td rowspan="3" class="side">
+    <div class="header">
+        <div class="header__title">
+            <h2>In Rust we trust!🦀🦀🦀</h2>
+        </div>
+        <img src="rust-logo.png" alt="rust logo" style="float: right;">
+    </div>
+    <div class="flexbox_container">
+        <div class="under_header">
+            <div class="side">
                 <ul>
                     <li><a href="index.html">Main</a></li>
                     <li><a href="learning.html">Learning Rust</a></li>
                     <li><a href="ecosystem.html">Rust ecosystem🦀</a></li>
                     <li><a href="web.html">Web-development with Rust</a></li>
                 </ul>
-            </td>
-            <td rowspan="2" colspan="2" class="main">
-                <p>Now, let's write simple http-client in Rust</p>
+            </div>
+            <div class="body_group">
+            <div class="main_group">
+            <div class="main">
+                <!-- <p>Now, let's write simple http-client in Rust</p>
                 <hr>
                 <h3>Adding dependencies</h3>
                 <p>First off all, let's add <i>reqwest</i> crate to our <b>Cargo.toml</b>.</p>
@@ -37,7 +37,9 @@
                 <p>Let's write logic for entering link via CLI parameter</p>
                 <pre><code>
                     fn main() {
-                        let params: Vec<String> = std::env::args().into_iter().collect();
+                        let params: Vec<String> = std::env::args()
+                            .into_iter()
+                            .collect();
                         let link = params[1]; // first param is the name of file
                         println!("Link: {}", link);
                     }
@@ -51,40 +53,52 @@
                 <p>Now lets write client which will return response body</p>
                 <pre><code>
                     fn main() {
-                        let params: Vec<String> = std::env::args().into_iter().collect();
+                        let params: Vec<String> = std::env::args()
+                            .into_iter()
+                            .collect();
                         let link = params[1];
                         println!("Link: {}", link);
 
-                        let response = reqwest::blocking::get(&link).unwrap();
+                        let response = reqwest::blocking::get(&link)
+                            .unwrap();
 
                         println!("{:?}", response.text());
                     }
                 </code></pre>
-                <p>After executing we will get response body</p>
-            </td>
-            <td class="side1">
+                <p>After executing we will get response body</p> -->
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam esse eveniet repudiandae fuga aspernatur quae debitis natus, nemo, porro suscipit et consequatur quas exercitationem harum incidunt sapiente eius voluptatibus alias!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas obcaecati voluptas nemo cumque, natus provident dolorum asperiores quod consequatur necessitatibus cupiditate unde est dicta cum illo reprehenderit maxime porro harum.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, quos! Fugiat, sed odit at iste molestias quod eius explicabo officiis provident perferendis odio, repellendus, nemo quo? Mollitia praesentium obcaecati vero.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus commodi quisquam vitae sequi asperiores ullam maiores magni deleniti voluptas ipsam atque incidunt eaque rerum sunt accusamus, reprehenderit, dicta sed totam.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique voluptates maiores minima ipsum numquam, pariatur sunt natus, molestiae, iusto fuga neque officia iure magnam? Culpa rem hic placeat consectetur obcaecati?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur nulla incidunt numquam quisquam at cum quo aspernatur perferendis magni nesciunt, ut alias eos recusandae sunt accusamus accusantium possimus ab nihil.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam quas quam ipsa odit voluptas eaque delectus amet, ratione suscipit natus nisi dolorem. Assumenda laborum maxime dicta eaque. Accusantium, dolores quasi.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore commodi quae debitis quos, excepturi corrupti esse id unde nihil libero error, est numquam nemo blanditiis? Asperiores laudantium voluptatum at iste.
+            </div>
+            <div class="right_side">
+            <div class="side1">
                 <h3>What about Rust's ecosystem?</h3>
 The Rust ecosystem is still relatively young and evolving, especially compared to more established languages like C++ and Python. However, it is fast-growing and gaining momentum due to strong community support, contributions from major tech companies, and its unique focus on performance and safety.
-            </td>
-        </tr>
-        <tr>
-            <td class="side2">
+            </div>
+            <div class="side2">
                 <h3>Where can I get libraries for my project?</h3>
                 <p>Cosider visiting <a href="https://crates.io">crates.io</a>. It is an official repository of Rust so known <b>crates</b>.</p>
                 <h3>Where I can read documentation for them?</h3>
                 <p>Documentation for all crates is placed on <a href="https://docs.rs">docs.rs</a>. There you can find docs, modules, cargo-features and source code. Some crates and frameworks can have their own websites, like <a href="https://actix.rs">actix_web</a>.</p>
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" class="footer">
+            </div>
+            </div>
+
+        </div>
+            <div class="footer">
                 <div class="footer__div">
                     <div class="footer__title">
-                        <h2>🗲blazing fast language</h2>
+                        <h2>built with flexbox and love</h2>
                     </div>
                     <p>Please, consider learning more about reqwest here: <a href="https://docs.rs/reqwest/latest/reqwest/">link</a>
                 </div>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </div>
+
+        </div>
 </body>
 </html>
