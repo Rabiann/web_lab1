@@ -28,7 +28,7 @@
             <div class="main_group">
             <div class="main">
                 <div>
-                <form>
+                <form onsubmit="return false" class="myform">
                     <input type="number" name="n1" min="0" max="100" value="10">
                     <input type="number" name="n2" min="0" max="100" value="10">
                     <input type="number" name="n3" min="0" max="100" value="10">
@@ -95,7 +95,7 @@ The Rust ecosystem is still relatively young and evolving, especially compared t
             <div class="body_group">
             <div class="main_group">
             <div class="main">
-                <form id="myform">
+                <form class="myform" onsubmit="return false">
                     <input type="number" name="n1", min="0", max="100" value="50">
                     <input type="number" name="n2", min="0", max="100" value="50">
                     <input type="number" name="n3", min="0", max="100" value="50">
@@ -106,7 +106,7 @@ The Rust ecosystem is still relatively young and evolving, especially compared t
                     <input type="number" name="n8", min="0", max="100" value="50">
                     <input type="number" name="n9", min="0", max="100" value="50">
                     <input type="number" name="n10", min="0", max="100" value="50">
-                    <input type="submit">
+                    <input type="submit" value="Submit">
                 </form>
             </div>
             <div class="right_side">
